@@ -22,7 +22,7 @@ function App() {
       const formData = new FormData();
       formData.append('image', imageFile);
 
-      const response = await axios.post('http://localhost:5000/upload/image', formData, {
+      const response = await axios.post('http://localhost:6001/upload/image', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -41,7 +41,7 @@ function App() {
       const formData = new FormData();
       formData.append('video', videoFile);
 
-      const response = await axios.post('http://localhost:5000/upload/video', formData, {
+      const response = await axios.post('http://localhost:6001/upload/video', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -64,7 +64,7 @@ function App() {
       {imageUrl && (
         <div>
           <h3>Uploaded Image:</h3>
-          <img src={`http://localhost:5000${imageUrl}`} alt="Uploaded" style={{ maxWidth: '100%' }} />
+          <img src={`http://localhost:6001${imageUrl}`} alt="Uploaded" style={{ maxWidth: '100%' }} />
         </div>
       )}
 
@@ -76,7 +76,7 @@ function App() {
         <div>
           <h3>Uploaded Video:</h3>
           <video controls width="100%">
-            <source src={`http://localhost:5000${videoUrl}`} type="video/mp4" />
+            <source src={`http://localhost:6001${videoUrl}`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

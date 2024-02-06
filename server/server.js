@@ -3,7 +3,7 @@ const multer = require('multer');
 const path = require('path');
 const cors = require('cors');
 const app = express();
-const port = 5000;
+const port = 6001;
 
 app.use(cors());
 
